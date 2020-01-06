@@ -50,6 +50,7 @@
 | | Rule | 숫자 비교 등의 게임 룰 처리
 |player | User | 게임을 하는 사용자 / 숫자 입력 등
 | |Computer | 컴퓨터 역할 / 난수 생성
+| - | Application | main
 
 
 ### 기능 및 예외
