@@ -21,4 +21,8 @@ public class Computer {
     public ArrayList<Integer> getNumber(){
         return number;
     }
+
+    public static int getDigitOfNumber(){
+        return DIGIT_OF_NUMBER;
+    }
 }
