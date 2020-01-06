@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Computer {
     final static int DIGIT_OF_NUMBER = 3;
-    private ArrayList<Integer> number = new ArrayList<Integer>();
+    protected ArrayList<Integer> number = new ArrayList<Integer>();
 
     public void setNumber() {
         Random random = new Random();
@@ -17,11 +17,9 @@ public class Computer {
         }
     }
 
-    public void getNumber() {
-        for (int num : number) {
-            System.out.println(num);
+    public void getNumber(){
+        for (Integer number : number){
+            System.out.println(number);
         }
     }
-
-
 }
