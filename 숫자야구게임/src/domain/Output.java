@@ -14,8 +14,10 @@ public class Output {
             System.out.println("게임을 종료하려면 1, 새로운 게임을 시작하려면 2 를 입력하세요.");
         } else if (ballStrike[0] == 0 && ballStrike[1] == 0) {
             System.out.println("낫싱");
-        } else if (ballStrike[0] != 0) {
-            System.out.print(ballStrike[0] + "볼 ");
+        } else if (ballStrike[0] != 0 || ballStrike[1] != 0) {
+            if (ballStrike[0] != 0) {
+                System.out.print(ballStrike[0] + "볼 ");
+            }
             if (ballStrike[1] != 0) {
                 System.out.println(ballStrike[1] + "스트라이크");
             }
