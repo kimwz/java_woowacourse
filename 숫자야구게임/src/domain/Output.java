@@ -19,6 +19,7 @@ public class Output {
             if (ballStrike[1] != 0) {
                 System.out.println(ballStrike[1] + "스트라이크");
             }
+            System.out.println("\n");
         }
     }
 }

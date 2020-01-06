@@ -8,7 +8,9 @@ public class Input {
 
     public static ArrayList<Integer> inputUserNumber() {
         String inputNumber = scanner.next();
-        Check.checkUserNumber(inputNumber);
+        while(Check.isUserNumberError(inputNumber)){
+            inputNumber = scanner.next();
+        }
         return intoList(inputNumber);
     }
 
