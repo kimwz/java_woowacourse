@@ -3,11 +3,15 @@ package domain;
 import player.Computer;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
 public class Check {
-    static ArrayList<Boolean> checkList;
+    final static ArrayList<Integer> endingExample = new ArrayList<Integer>(Arrays.asList(1,2));
+    private static ArrayList<Boolean> checkList;
+
+
     public static Boolean isUserNumberError(String inputNumber){
         checkList = new ArrayList<Boolean>();
         if (!isInt(inputNumber)){
@@ -16,6 +20,15 @@ public class Check {
         checkList.add(isCollectDigitNumber(inputNumber));
         checkList.add(isNotContainZero(inputNumber));
         checkList.add(isNotRepeatedNumber(inputNumber));
+        return checkList.contains(false);
+    }
+
+    public static Boolean isInputEndingError(String userInput){
+        checkList = new ArrayList<Boolean>();
+        if (!isInt(userInput)){
+            return true;
+        }
+        checkList.add(isOneOrTwo(userInput));
         return checkList.contains(false);
     }
 
@@ -42,6 +55,14 @@ public class Check {
             return true;
         }
         System.out.println("1 이상 9 이하의 숫자를 입력하세요.");
+        return false;
+    }
+
+    public static Boolean isOneOrTwo(String inputNumber){
+        if (endingExample.contains(Integer.parseInt(inputNumber))){
+            return true;
+        }
+        System.out.println("1 또는 2 를 입력하세요.");
         return false;
     }
 

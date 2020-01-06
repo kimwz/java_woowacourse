@@ -24,7 +24,9 @@ public class Input {
 
     public static int isEnd() {
         String userInput = scanner.next();
-        //예외 체크
+        while(Check.isInputEndingError(userInput)){
+            userInput = scanner.next();
+        }
         return Integer.parseInt(userInput);
     }
 }
