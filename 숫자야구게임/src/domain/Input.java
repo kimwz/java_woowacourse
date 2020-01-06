@@ -19,4 +19,10 @@ public class Input {
         }
         return result;
     }
+
+    public static int isEnd(){
+        String userInput = scanner.next();
+        //예외 체크
+        return Integer.parseInt(userInput);
+    }
 }

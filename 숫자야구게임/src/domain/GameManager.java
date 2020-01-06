@@ -8,17 +8,22 @@ public class GameManager {
     private User user = new User();
 
     public void gameStart(){
-        setting();
+        do {
+            setting();
+            gaming();
+        } while (Input.isEnd() == 2);
     }
 
     public void setting(){
         computer.setNumber();
         computer.getNumber();
+    }
+
+    public void gaming(){
         user.setNumber();
         while (compare()[1]!=3){
             user.setNumber();
         }
-
     }
 
     public int[] compare(){
