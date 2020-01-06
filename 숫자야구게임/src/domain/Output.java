@@ -8,4 +8,10 @@ public class Output {
         //예외 검사
         return Input.inputUserNumber();
     }
+
+    public static void outputBallStrike(int[] ballStrike){
+        if (ballStrike[1]==3){
+            System.out.println("3스크라이크");
+        }
+    }
 }

@@ -17,9 +17,7 @@ public class Computer {
         }
     }
 
-    public void getNumber(){
-        for (Integer number : number){
-            System.out.println(number);
-        }
+    public ArrayList<Integer> getNumber(){
+        return number;
     }
 }
