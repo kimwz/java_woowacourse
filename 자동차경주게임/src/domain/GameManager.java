@@ -10,6 +10,7 @@ public class GameManager {
 
     public void gameStart(){
         init();
+        run();
     }
 
     public void init(){
@@ -25,6 +26,22 @@ public class GameManager {
 
     public void setRound(int roundNumber){
         this.roundNumber = roundNumber;
+    }
+
+    public void run(){
+        System.out.println("실행 결과");
+        for (int i=0;i<roundNumber;i++){
+            stayOrGo();
+            Output.printGameRun(carList);
+        }
+    }
+
+    public void stayOrGo(){
+        for(Car car:carList){
+            if(Dice.makeRandomNumber()>3){
+                car.go();
+            }
+        }
     }
 
     public void getCarName(){
