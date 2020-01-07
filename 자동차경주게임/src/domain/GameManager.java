@@ -5,6 +5,7 @@ import inout.Output;
 import java.util.ArrayList;
 
 public class GameManager {
+    final static int MIN_DICE_NUMBER_TO_MOVE = 4;
     private ArrayList<Car> carList = new ArrayList<Car>();
     private int roundNumber;
 
@@ -32,31 +33,20 @@ public class GameManager {
     public void run(){
         System.out.println("실행 결과");
         for (int i=0;i<roundNumber;i++){
-            stayOrGo();
+            stayOrMove();
             Output.printGameRun(carList);
         }
     }
 
-    public void stayOrGo(){
+    public void stayOrMove(){
         for(Car car:carList){
-            if(Dice.makeRandomNumber()>3){
-                car.go();
+            if(Dice.makeRandomNumber()>=MIN_DICE_NUMBER_TO_MOVE){
+                car.move();
             }
         }
     }
 
     public void award(){
         Output.printAward(Winner.getWinners(carList));
-    }
-
-
-    public void getCarName(){
-        for(Car car:carList){
-            System.out.println(car.getName());
-        }
-    }
-
-    public void getRound(){
-        System.out.println(roundNumber);
     }
 }

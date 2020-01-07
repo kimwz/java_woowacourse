@@ -16,7 +16,7 @@ public class Car {
         return position;
     }
 
-    public void go(){
+    public void move(){
         position+=1;
     }
 }
