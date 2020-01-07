@@ -11,6 +11,7 @@ public class GameManager {
     public void gameStart(){
         init();
         run();
+        award();
     }
 
     public void init(){
@@ -43,6 +44,11 @@ public class GameManager {
             }
         }
     }
+
+    public void award(){
+        Output.printAward(Winner.getWinners(carList));
+    }
+
 
     public void getCarName(){
         for(Car car:carList){

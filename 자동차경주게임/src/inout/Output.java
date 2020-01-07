@@ -18,13 +18,18 @@ public class Output {
 
     public static void printGameRun(ArrayList<Car> carList) {
         for (Car car : carList) {
-            System.out.print(car.getName() + " : "+printPositionLevel(car.getPosition()));
+            System.out.print(car.getName() + " : " + printPositionLevel(car.getPosition()));
             System.out.println();
         }
         System.out.println();
     }
 
-    public static String printPositionLevel(int position){
-        return new String(new char[position]).replace("\0","-");
+    public static String printPositionLevel(int position) {
+        return new String(new char[position]).replace("\0", "-");
+    }
+
+    public static void printAward(ArrayList<String> winners) {
+        String winner = String.join(",",winners);
+        System.out.println(winner+" 가 우승했습니다.");
     }
 }
