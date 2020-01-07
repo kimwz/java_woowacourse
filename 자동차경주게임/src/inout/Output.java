@@ -1,7 +1,6 @@
 package inout;
 
 import domain.Car;
-import domain.Dice;
 
 import java.util.ArrayList;
 
