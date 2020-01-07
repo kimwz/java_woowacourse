@@ -9,17 +9,19 @@ import java.util.Scanner;
 public class Input {
     private final static Scanner scanner = new Scanner(System.in);
 
-    public static ArrayList<String> inputCarName(){
+    public static ArrayList<String> inputCarName() {
         String[] names = scanner.next().split(",");
-        while(Check.isCarNameError(names)){
+        while (Check.isCarNameError(names)) {
             names = scanner.next().split(",");
         }
         return new ArrayList<String>(Arrays.asList(names));
     }
 
-    public static int inputRound(){
+    public static int inputRound() {
         String round = scanner.next();
-        //예외 검사
+        while (Check.isInputRoundError(round)){
+            round = scanner.next();
+        }
         return Integer.parseInt(round);
     }
 }
