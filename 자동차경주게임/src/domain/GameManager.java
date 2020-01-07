@@ -14,7 +14,7 @@ public class GameManager {
 
     public void init(){
         setCar(Output.printInputCarNameMessage());
-        setRound();
+        setRound(Output.printInputRoundMessage());
     }
 
     public void setCar(ArrayList<String> carNames){
@@ -23,13 +23,17 @@ public class GameManager {
         }
     }
 
-    public void setRound(){
-
+    public void setRound(int roundNumber){
+        this.roundNumber = roundNumber;
     }
 
     public void getCarName(){
         for(Car car:carList){
             System.out.println(car.getName());
         }
+    }
+
+    public void getRound(){
+        System.out.println(roundNumber);
     }
 }

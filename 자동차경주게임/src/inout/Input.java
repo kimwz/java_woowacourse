@@ -12,4 +12,10 @@ public class Input {
         //예외 검사
         return new ArrayList<String>(Arrays.asList(names.split(",")));
     }
+
+    public static int inputRound(){
+        String round = scanner.next();
+        //예외 검사
+        return Integer.parseInt(round);
+    }
 }
