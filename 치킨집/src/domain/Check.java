@@ -8,6 +8,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class Check {
+    final static int ORDER_COUNT_MIN = 1;
+    final static int ORDER_COUNT_MAX = 100;
     private List<Integer> FUNCTION_NUMBER_RANGE = Collections.unmodifiableList(Arrays.asList(1, 2, 3));
     private List<Integer> TABLE_NUMBER_RANGE = Collections.unmodifiableList(Arrays.asList(1, 2, 3, 5, 6, 8));
     private List<Integer> MENU_NUMBER_RANGE = Collections.unmodifiableList(Arrays.asList(1, 2, 3, 4, 5, 6, 21, 22));
@@ -54,8 +56,8 @@ public class Check {
     }
 
     private Boolean isUnderHundred(String userInput) {
-        int target = Integer.parseInt(userInput);
-        if (target > 0 && target < 100) {
+        int number = Integer.parseInt(userInput);
+        if (number >= ORDER_COUNT_MIN && number <= ORDER_COUNT_MAX) {
             return true;
         }
         OutputView.printIsUnderHundredErrorMessage();
