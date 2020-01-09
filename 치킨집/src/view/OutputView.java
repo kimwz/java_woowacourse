@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class OutputView {
-    final static double DISCOUNT_RATE_OF_CREDIT = 0.95;
+    final static double DISCOUNT_RATE_OF_CASH = 0.95;
     private static final String TOP_LINE = "┌ ─ ┐";
     private static final String TABLE_FORMAT = "| %s |";
     private static final String BOTTOM_LINE = "└ ─ ┘";
@@ -52,7 +52,7 @@ public class OutputView {
             System.out.println("\n##최종 결제할 금액\n" + finalPrice + "원");
             return 0;
         }
-        System.out.println("\n##최종 결제할 금액\n" + finalPrice * DISCOUNT_RATE_OF_CREDIT + "원");
+        System.out.println("\n##최종 결제할 금액\n" + finalPrice * DISCOUNT_RATE_OF_CASH + "원");
         return 0;
     }
 
